@@ -29,6 +29,7 @@ test:
     - rstcheck
   commands:
     - python -m rstcheck --help
+    - pip check
 
 about:
   home: https://pypi.org/project/rstcheck
