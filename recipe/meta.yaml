@@ -1,5 +1,5 @@
 {% set name = "rstcheck" %}
-{% set version = "3.4.0" %}
+{% set version = "3.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: a142f780bcfa5d17407f1729c66a45ddbbb979789dafda16b19aa347ea8a2d4c
+  sha256: d4b035300b7d898403544f38c3a4980171ce85f487d25e188347bbafb6ee58c0
 
 build:
   noarch: python
