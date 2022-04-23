@@ -31,7 +31,7 @@ test:
   imports:
     - rstcheck
   commands:
-    - python -m rstcheck --help
+    - rstcheck --help
     - pip check
 
 about:
