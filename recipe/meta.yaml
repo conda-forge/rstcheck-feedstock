@@ -1,5 +1,5 @@
 {% set name = "rstcheck" %}
-{% set version = "3.5.0" %}
+{% set version = "4.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d4b035300b7d898403544f38c3a4980171ce85f487d25e188347bbafb6ee58c0
+  sha256: f656cb2097c4559af13ed4861e68f2190497531cbcaa4d96e994c0591131fa1e
 
 build:
   noarch: python
@@ -20,16 +20,19 @@ requirements:
   host:
     - python >=3.6
     - pip
+    - poetry
   run:
     - python >=3.6
     - docutils >=0.7
     - pip
+    - types-docutils
+    - typing-extensions
 
 test:
   imports:
     - rstcheck
   commands:
-    - python -m rstcheck --help
+    - rstcheck --help
     - pip check
 
 about:
