@@ -23,6 +23,7 @@ requirements:
   run:
     - python >=3.6
     - docutils >=0.7
+    - pip
 
 test:
   imports:
