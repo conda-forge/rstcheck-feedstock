@@ -23,10 +23,8 @@ requirements:
     - poetry
   run:
     - python >=3.6
-    - docutils >=0.7
     - pip
-    - types-docutils
-    - typing-extensions
+    - typer
 
 test:
   imports:
