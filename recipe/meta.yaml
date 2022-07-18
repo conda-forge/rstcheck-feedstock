@@ -14,7 +14,7 @@ build:
   number: 0
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
-    - rstcheck = rstcheck:main
+    - rstcheck = rstcheck._cli:main
 
 requirements:
   host:
