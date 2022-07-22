@@ -25,7 +25,7 @@ requirements:
     - python >=3.6
     - pip
     - rstcheck-core
-    - typer
+    - typer <0.5,>=0.3.2
 
 test:
   imports:
