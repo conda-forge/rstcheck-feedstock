@@ -6,24 +6,24 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 384942563dfbfcc85903a587ecf050447217c46b51e266ed3fe51371bc599015
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - rstcheck = rstcheck._cli:main
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - pip
     - setuptools >=61
     - setuptools-scm >=6.2
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - pip
     - rstcheck-core >=1.1
     - typer >=0.4.1
@@ -31,6 +31,8 @@ requirements:
     - typing-extensions >=3.7.4
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - rstcheck
   commands:
